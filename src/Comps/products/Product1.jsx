@@ -3,8 +3,7 @@ import { useFetch } from "../../context/FetchContext";
 import { ProductDropdown, ProductDescription, ProductFeature } from "../index";
 const Product1 = () => {
   const [compareData, setCompareData] = useState({});
-  const [id, setId] = useState("");
-  const { featuresList } = useFetch();
+  const { featuresList,setId,id } = useFetch();
 
   return (
     <div className="">

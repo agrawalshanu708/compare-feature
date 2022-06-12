@@ -3,7 +3,6 @@ import { useFetch } from "../context/FetchContext";
 
 const ProductDropdown = ({ setCompareData, setId }) => {
   const { compareSummary } = useFetch();
-
   const compareValues = Object.values(compareSummary);
   const [images, titles, productPricingSummary] = compareValues;
 
@@ -17,7 +16,7 @@ const ProductDropdown = ({ setCompareData, setId }) => {
 
   return (
     <>
-      <label for="cars">Choose a TV: </label>
+      <label for="tv">Choose a TV: </label>
       <select name="tv" id="tv" onChange={(e) => TVHandler(e.target.value)}>
         <option value="TVSE8FMZ9AQMEGC6">TV1</option>
         <option value="TVSF2WYUE4PWNJKM">TV2</option>
@@ -27,7 +26,7 @@ const ProductDropdown = ({ setCompareData, setId }) => {
           None
         </option>
       </select>
-    <p>Select Tv to compare</p>
+      <p>Select Tv to compare</p>
     </>
   );
 };
