@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { FetchProvider } from "./Context/FetchContext";
+import { FetchProvider } from "./context/FetchContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

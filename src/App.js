@@ -1,5 +1,5 @@
 import "./App.css";
-import { Compare } from "./Screen/Compare";
+import { Compare } from "./screens/Compare";
 function App() {
   return (
     <div className="App">

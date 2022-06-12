@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
-import { useFetch } from "../Context/FetchContext";
+import { useFetch } from "../context/FetchContext";
 
 const ProductDropdown = ({ setCompareData, setId }) => {
   const { compareSummary } = useFetch();
