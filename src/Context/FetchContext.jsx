@@ -6,6 +6,8 @@ const FetchContext = createContext();
 const FetchProvider = ({ children }) => {
   const [compareSummary, setCompareSummary] = useState({});
   const [featuresList, setFeaturesList] = useState([]);
+  const [id, setId] = useState("");
+  const [id2, setId2] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,7 +18,7 @@ const FetchProvider = ({ children }) => {
         setCompareSummary(response.data.products.compareSummary);
         setFeaturesList(response.data.products.featuresList);
       } catch (error) {
-        console.log(error);
+        console.error(error);
       }
     };
 
@@ -24,7 +26,9 @@ const FetchProvider = ({ children }) => {
   }, []);
 
   return (
-    <FetchContext.Provider value={{ compareSummary, featuresList }}>
+    <FetchContext.Provider
+      value={{ compareSummary, featuresList, id, setId, id2, setId2 }}
+    >
       {children}
     </FetchContext.Provider>
   );

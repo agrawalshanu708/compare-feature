@@ -2,20 +2,19 @@ import React, { useState } from "react";
 import { useFetch } from "../../context/FetchContext";
 import { ProductDropdown, ProductDescription, ProductFeature } from "../index";
 
-const Product2 = ({ placeHolder, setPlaceholder }) => {
+const Product2 = () => {
   const [compareData, setCompareData] = useState({});
-  const [id, setId] = useState("");
-  const { featuresList } = useFetch();
+  const { featuresList, id2, setId2 } = useFetch();
 
   return (
     <>
       <div className="cursor">
-        <ProductDropdown setCompareData={setCompareData} setId={setId} />
+        <ProductDropdown setCompareData={setCompareData} setId={setId2} />
         <div className="grid-row">
-          <ProductDescription compareData={compareData} id={id} />
+          <ProductDescription compareData={compareData} id={id2} />
           <ProductFeature
             featuresList={featuresList}
-            id={id}
+            id={id2}
             showFeature={false}
           />
         </div>
