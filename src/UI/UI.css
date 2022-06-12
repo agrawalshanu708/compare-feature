@@ -1,0 +1,14 @@
+.grid-col {
+    display: grid;
+    grid-template-columns: auto auto;
+
+}
+.container>div{
+    border: 1px solid #e2e8f0;
+}
+
+.container{
+    margin: 5rem 9rem
+}
+
+  
