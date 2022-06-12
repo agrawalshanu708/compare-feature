@@ -1,12 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
-import {UI}from "./UI/UI"
+import "./App.css";
+import { Compare } from "./Screen/Compare";
 function App() {
   return (
     <div className="App">
       <h1>Tila Round-2</h1>
- 
-      <UI/>
+      <Compare />
     </div>
   );
 }

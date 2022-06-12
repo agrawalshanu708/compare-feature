@@ -9,11 +9,19 @@ const Product1 = () => {
 
   return (
     <div className="">
-      <ProductDropdown setCompareData={setCompareData} setId={setId} showOptio = {false}/>
+      <ProductDropdown
+        setCompareData={setCompareData}
+        setId={setId}
+      />
       <div className="grid-row">
-        <ProductDescription compareData={compareData} />
-        <ProductFeature featuresList = {featuresList} id = {id} showFeature= {true}/>
-      </div></div>
+        <ProductDescription compareData={compareData} id={id} />
+        <ProductFeature
+          featuresList={featuresList}
+          id={id}
+          showFeature={true}
+        />
+      </div>
+    </div>
   );
 };
 

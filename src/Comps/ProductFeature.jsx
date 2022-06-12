@@ -9,10 +9,10 @@ const ProductFeature = ({featuresList,id,showFeature}) => {
     <div>
          {featuresList.map(({ features, title }) => (
           <div>
-            {showFeature && <p className="bold sub-title">{title}</p>}
+            { !showFeature ? id && <p>-</p> : id && <p className="bold sub-title">{title}</p>}
             {features.map(({ featureName, properties, values }) => (
               <div className="grid-col2">
-               { showFeature &&  <p>{featureName}</p>}
+               { showFeature && id && <p>{featureName}</p>}
                 <p>{getValue(values)}</p>
               </div>
             ))}
